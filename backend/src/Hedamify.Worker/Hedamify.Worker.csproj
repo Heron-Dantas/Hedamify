@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Hedamify.Worker-5e08ad2b-b42d-4a88-8dfc-8a4aa21ba00a</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hedamify.Domain\Hedamify.Domain.csproj" />
+    <ProjectReference Include="..\Hedamify.Infrastructure\Hedamify.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

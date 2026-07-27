@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Hedamify.Api/Hedamify.Api.csproj" />
+    <Project Path="src/Hedamify.Domain/Hedamify.Domain.csproj" />
+    <Project Path="src/Hedamify.Infrastructure/Hedamify.Infrastructure.csproj" />
+    <Project Path="src/Hedamify.Worker/Hedamify.Worker.csproj" />
+  </Folder>
+</Solution>

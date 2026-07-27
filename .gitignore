@@ -1,0 +1,23 @@
+# === .NET (backend/) ===
+bin/
+obj/
+*.user
+.vs/
+
+# === Node / Angular (frontend/) ===
+node_modules/
+dist/
+.angular/
+npm-debug.log*
+
+# === Editors / IDE ===
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# === OS ===
+.DS_Store
+Thumbs.db
