@@ -23,9 +23,23 @@ Documentacao/  Especificação técnica e materiais de referência
 
 ## Backend
 
+Banco de dados local (SQL Server via Docker, mesmo provider do Azure SQL usado em produção):
+
 ```
 cd backend
+docker compose up -d
+export PATH="$PATH:$HOME/.dotnet/tools"   # se a ferramenta dotnet-ef não estiver no PATH
+dotnet tool install -g dotnet-ef --version 10.0.10   # primeira vez apenas
+dotnet ef database update --project src/Hedamify.Infrastructure --startup-project src/Hedamify.Api
 dotnet build Hedamify.slnx
+```
+
+A connection string de dev está em `src/Hedamify.Api/appsettings.Development.json` (usuário `sa`, senha `Hedamify_Dev123!` — só para uso local). Em produção, a connection string do Azure SQL deve vir da configuração do App Service, nunca de um arquivo versionado.
+
+Para criar uma nova migration depois de alterar entidades:
+
+```
+dotnet ef migrations add NomeDaMigration --project src/Hedamify.Infrastructure --startup-project src/Hedamify.Api --output-dir Data/Migrations
 ```
 
 ## Frontend
